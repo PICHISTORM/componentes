@@ -19,11 +19,56 @@
 <app-header
   titulo="alert"
   [defaultHref]="'/inicio'">
+</app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">alert</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <ion-button (click)="setOpen(true)" expand="block">
+    Alerta 1 (Solo OK)
+  </ion-button>
+
+  <ion-button (click)="setOpen2(true)" expand="block" >
+    Alerta 2 (OK y Cancelar)
+  </ion-button>
+
+
+  <ion-button (click)="setOpen3(true)" expand="block" color="secondary">
+    formulario
+  </ion-button>
+
+
+
+<ion-alert
+  [isOpen]="isAlertOpen"
+  backdropDismiss="false"
+  header="Confirmación"
+  message="¿Deseas continuar con esta acción?"
+  [buttons]="alertButtons"
+  (didDismiss)="setOpen(false)"
+></ion-alert>
+
+
+<ion-alert
+  [isOpen]="isAlertOpen2"
+  backdropDismiss="false"
+  header="Confirmación"
+  message="¿Deseas continuar con esta acción?"
+  [buttons]="alertButtons2"
+  (didDismiss)="setOpen2(false)"
+></ion-alert>
+
+
+
+  <ion-alert
+    [isOpen]="isAlertOpen3"
+    backdropDismiss="false"
+    header="Please enter your info"
+    [buttons]="alertButtons3"
+    [inputs]="alertInputs"
+    (didDismiss)="setOpen3(false)"
+  ></ion-alert>
+
+
+
+
 </ion-content>

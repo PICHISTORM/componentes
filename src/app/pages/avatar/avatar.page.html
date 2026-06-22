@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">avatar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <ion-img src="/assets/stan-lee.jpg" alt="avatar"> </ion-img>
+      </ion-avatar>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  @for (item of items; track $index) {
+    <ion-chip color="primary" outline="true">
+      <ion-avatar>
+        <img src="/assets/stan-lee.jpg" />
+      </ion-avatar>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+  }
+
+  <ion-list>
+    @for (item of items; track $index) {
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="/assets/stan-lee.jpg" />
+        </ion-avatar>
+        <ion-label>Stan Lee</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>

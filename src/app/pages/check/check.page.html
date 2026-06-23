@@ -1,0 +1,24 @@
+<app-header
+  titulo="checks"
+  [defaultHref]="'/inicio'">
+</app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    @for (item of data; track $index) {
+      <ion-item (click)="onClick(item)">
+
+        <ion-checkbox [color]="item.name" [(ngModel)]="item.selected" slot="start"></ion-checkbox>
+        <ion-label>{{item.name}}</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+
+  <ion-button (click)="verData()" expand="block">
+    Ver data
+  </ion-button>
+
+</ion-content>

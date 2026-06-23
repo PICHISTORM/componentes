@@ -56,7 +56,11 @@ export class InicioPage implements OnInit {
       name: 'Checks',
       redirectTo: '/check',
     },
-
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirectTo: '/fab',
+    },
 
   ];
 

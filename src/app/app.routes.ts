@@ -39,6 +39,10 @@ export const routes: Routes = [
   {
     path: 'fab',
     loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
+  },  {
+    path: 'grid',
+    loadComponent: () => import('./pages/grid/grid.page').then( m => m.GridPage)
   },
+
 
 ];

@@ -28,4 +28,8 @@ export const routes: Routes = [
     path: 'button',
     loadComponent: () => import('./pages/button/button.page').then( m => m.ButtonPage)
   },
+  {
+    path: 'card',
+    loadComponent: () => import('./pages/card/card.page').then( m => m.CardPage)
+  },
 ];

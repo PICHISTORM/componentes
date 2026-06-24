@@ -43,6 +43,10 @@ export const routes: Routes = [
     path: 'grid',
     loadComponent: () => import('./pages/grid/grid.page').then( m => m.GridPage)
   },
+  {
+    path: 'infinite',
+    loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
+  },
 
 
 ];

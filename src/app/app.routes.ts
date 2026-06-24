@@ -39,11 +39,13 @@ export const routes: Routes = [
   {
     path: 'fab',
     loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
-  },  {
+  },
+  {
     path: 'grid',
     loadComponent: () => import('./pages/grid/grid.page').then( m => m.GridPage)
   },
   {
+
     path: 'input',
     loadComponent: () => import('./pages/input/input.page').then( m => m.InputPage)
   },
@@ -54,6 +56,13 @@ export const routes: Routes = [
   {
     path: 'list-reorder',
     loadComponent: () => import('./pages/list-reorder/list-reorder.page').then( m => m.ListReorderPage)
+
+  },
+  {
+
+    path: 'infinite',
+    loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
+
   },
 
 

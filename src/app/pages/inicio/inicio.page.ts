@@ -67,6 +67,7 @@ export class InicioPage implements OnInit {
       redirectTo: '/grid',
     },
 
+
     {
       icon: 'hammer-outline',
       name: 'Input Forms',
@@ -81,7 +82,13 @@ export class InicioPage implements OnInit {
       icon: 'reorder-three-outline',
       name: 'List - Reorder',
       redirectTo: '/list-reorder',
-    }
+    },
+
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite',
+    },
 
   ];
 

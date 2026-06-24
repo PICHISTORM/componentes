@@ -47,6 +47,10 @@ export const routes: Routes = [
     path: 'input',
     loadComponent: () => import('./pages/input/input.page').then( m => m.InputPage)
   },
+  {
+    path: 'list',
+    loadComponent: () => import('./pages/list/list.page').then( m => m.ListPage)
+  },
 
 
 ];

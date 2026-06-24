@@ -36,4 +36,8 @@ export const routes: Routes = [
     path: 'check',
     loadComponent: () => import('./pages/check/check.page').then( m => m.CheckPage)
   },
+  {
+    path: 'date-time',
+    loadComponent: () => import('./pages/date-time/date-time.page').then( m => m.DateTimePage)
+  },
 ];

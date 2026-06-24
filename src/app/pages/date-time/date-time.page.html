@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DateTime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <!-- DATOS DE NACIMIENTO -->
+
+    <ion-list-header>
+      <ion-label>Datos de nacimiento</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+
+      <ion-datetime-button
+        slot="end"
+        datetime="birth-datetime">
+      </ion-datetime-button>
+    </ion-item>
+
+    <ion-modal [keepContentsMounted]="true">
+
+      <ng-template>
+
+        <ion-datetime
+          id="birth-datetime"
+          presentation="date"
+          [preferWheel]="true"
+          [value]="fechaNaci"
+          (ionChange)="cambioFecha($event)">
+        </ion-datetime>
+
+      </ng-template>
+
+    </ion-modal>
+
+    <!-- RESTRICCIONES -->
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+
+      <ion-datetime-button
+        slot="end"
+        datetime="range-datetime">
+      </ion-datetime-button>
+    </ion-item>
+
+    <ion-modal [keepContentsMounted]="true">
+
+      <ng-template>
+
+        <ion-datetime
+          id="range-datetime"
+          presentation="date"
+          [preferWheel]="true"
+          min="2015-01-01"
+          max="2023-12-31"
+          [value]="fechaMinMax"
+          (ionChange)="cambioMinMax($event)">
+        </ion-datetime>
+
+      </ng-template>
+
+    </ion-modal>
+
+    <!-- AÑOS -->
+
+    <ion-item>
+
+      <ion-label>Años</ion-label>
+
+      <ion-select
+        interface="action-sheet"
+        [(ngModel)]="anioSeleccionado">
+
+        <ion-select-option
+          *ngFor="let year of years"
+          [value]="year">
+
+          {{ year }}
+
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

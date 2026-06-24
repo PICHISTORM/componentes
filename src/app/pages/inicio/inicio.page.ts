@@ -67,6 +67,12 @@ export class InicioPage implements OnInit {
       redirectTo: '/grid',
     },
 
+    {
+      icon: 'hammer-outline',
+      name: 'Input Forms',
+      redirectTo: '/input',
+    }
+
   ];
 
   constructor() { }

@@ -69,4 +69,16 @@ export const routes: Routes = [
     path: 'infinite',
     loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
   },
+  {
+    path: 'modal',
+    loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
+  },
+
+  /*
+  {
+    path: 'modal-info',
+    loadComponent: () => import('./pages/modal-info/modal-info.page').then( m => m.ModalInfoPage)
+  },
+  */
+
 ];

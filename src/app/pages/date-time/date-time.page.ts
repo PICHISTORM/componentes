@@ -18,6 +18,7 @@ import {
 } from '@ionic/angular/standalone';
 
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from "src/app/components/header/header.component";
 
 @Component({
   selector: 'app-date-time',
@@ -41,8 +42,9 @@ import { FormsModule } from '@angular/forms';
     IonSelect,
     IonSelectOption,
     FormsModule,
-    CommonModule
-  ]
+    CommonModule,
+    HeaderComponent
+]
 })
 export class DateTimePage {
 

@@ -17,7 +17,7 @@ interface componente {
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, RouterLink, IonList, IonItem, IonLabel, IonIcon]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, RouterLink, IonList, IonItem, IonLabel, IonIcon]
 })
 export class InicioPage implements OnInit {
 
@@ -57,10 +57,25 @@ export class InicioPage implements OnInit {
       redirectTo: '/check',
     },
     {
+
       icon: 'car-outline',
       name: 'Fab',
       redirectTo: '/fab',
     },
+
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite',
+    },
+
+        {
+      icon: 'calendar-outline',
+      name: 'Date Time',
+      redirectTo: '/date-time',
+
+    },
+
     {
       icon: 'grid-outline',
       name: 'Grid',
@@ -84,11 +99,7 @@ export class InicioPage implements OnInit {
       redirectTo: '/list-reorder',
     },
 
-    {
-      icon: 'infinite-outline',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite',
-    },
+
 
   ];
 

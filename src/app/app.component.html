@@ -1,3 +1,33 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu side="start" menuId="first" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Componentes</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+
+      <ion-list>
+
+        <ion-menu-toggle>
+          @for (c of componentes | async; track c.name) {
+            <ion-item [routerLink]="c.redirectTo"
+            detail>
+              <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+              <ion-label>{{ c.name }}</ion-label>
+            </ion-item>
+          }
+        </ion-menu-toggle>
+
+
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

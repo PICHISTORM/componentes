@@ -37,16 +37,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/check/check.page').then( m => m.CheckPage)
   },
   {
-
-    path: 'infinite',
-    loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
-
-  },
-  {
     path: 'date-time',
     loadComponent: () => import('./pages/date-time/date-time.page').then( m => m.DateTimePage)
   },
-  {
+   {
 
     path: 'fab',
     loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
@@ -56,7 +50,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/grid/grid.page').then( m => m.GridPage)
   },
   {
-
     path: 'input',
     loadComponent: () => import('./pages/input/input.page').then( m => m.InputPage)
   },
@@ -67,8 +60,13 @@ export const routes: Routes = [
   {
     path: 'list-reorder',
     loadComponent: () => import('./pages/list-reorder/list-reorder.page').then( m => m.ListReorderPage)
-
   },
-
-
+  {
+    path: 'loading',
+    loadComponent: () => import('./pages/loading/loading.page').then( m => m.LoadingPage)
+  },
+  {
+    path: 'infinite',
+    loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
+  },
 ];

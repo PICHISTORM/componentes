@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
   templateUrl: './list.page.html',
   styleUrls: ['./list.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonList, IonItem, IonLabel, IonItemSliding, IonItemOption, IonItemOptions, IonIcon]
+  imports: [IonContent, CommonModule, FormsModule, HeaderComponent, IonList, IonItem, IonLabel, IonItemSliding, IonItemOption, IonItemOptions, IonIcon]
 })
 export class ListPage implements OnInit {
 

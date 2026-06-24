@@ -9,7 +9,7 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   templateUrl: './check.page.html',
   styleUrls: ['./check.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonList, IonItem, IonLabel, IonCheckbox, IonButton]
+  imports: [IonContent, CommonModule, FormsModule, HeaderComponent, IonList, IonItem, IonLabel, IonCheckbox, IonButton]
 })
 export class CheckPage implements OnInit {
 

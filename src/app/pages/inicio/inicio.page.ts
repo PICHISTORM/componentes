@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRippleEffect, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonRippleEffect, IonButton, IonIcon, IonButtons, MenuController, IonAccordion, IonMenuButton } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
+import { Componente } from '../../interfaces/interfaces';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 interface componente {
   icon: string;
@@ -17,95 +20,22 @@ interface componente {
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, RouterLink, IonList, IonItem, IonLabel, IonIcon]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, RouterLink, IonList, IonItem, IonLabel, IonIcon, IonButtons, IonMenuButton]
 })
 export class InicioPage implements OnInit {
 
-  componentes: componente[] = [
-    {
-      icon: 'american-football-outline',
-      name: 'action-sheet',
-      redirectTo: '/action-sheet',
-    },
+  componentes!: Observable<Componente[]>;
 
-    {
-      icon: 'alert-circle-outline',
-      name: 'alert',
-      redirectTo: '/alert',
-    },
-
-    {
-      icon: 'beaker-outline',
-      name: 'avatar',
-      redirectTo: '/avatar',
-    },
-
-    {
-      icon: 'radio-button-on-outline',
-      name: 'button',
-      redirectTo: '/button',
-    },
-
-    {
-      icon: 'card-outline',
-      name: 'Cards',
-      redirectTo: '/card',
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'Checks',
-      redirectTo: '/check',
-    },
-    {
-
-      icon: 'car-outline',
-      name: 'Fab',
-      redirectTo: '/fab',
-    },
-
-    {
-      icon: 'infinite-outline',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite',
-    },
-
-        {
-      icon: 'calendar-outline',
-      name: 'Date Time',
-      redirectTo: '/date-time',
-
-    },
-
-    {
-      icon: 'grid-outline',
-      name: 'Grid',
-      redirectTo: '/grid',
-    },
-
-
-    {
-      icon: 'hammer-outline',
-      name: 'Input Forms',
-      redirectTo: '/input',
-    },
-    {
-      icon: 'list-outline',
-      name: 'List - Sliding',
-      redirectTo: '/list',
-    },
-    {
-      icon: 'reorder-three-outline',
-      name: 'List - Reorder',
-      redirectTo: '/list-reorder',
-    },
-
-
-
-  ];
-
-  constructor() { }
+  constructor( private menuCtrl: MenuController,
+               private dataService: DataService) { }
 
   ngOnInit() {
+    console.log(this.dataService.getMenuOpts());
+    this.componentes = this.dataService.getMenuOpts();
+  }
+
+  mostrarMenu(){
+    this.menuCtrl.open('first');
   }
 
 }

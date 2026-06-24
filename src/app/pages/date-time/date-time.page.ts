@@ -29,9 +29,6 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   imports: [
     CommonModule,
     IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
     IonDatetime,
     IonDatetimeButton,
     IonModal,

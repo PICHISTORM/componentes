@@ -9,7 +9,7 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   templateUrl: './fab.page.html',
   styleUrls: ['./fab.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCheckbox, IonButton, HeaderComponent, CommonModule, FormsModule, IonFooter, IonFab, IonFabButton, IonIcon, IonFabList]
+  imports: [IonContent, IonTitle, IonToolbar, IonItem, IonLabel, HeaderComponent, CommonModule, FormsModule, IonFooter, IonFab, IonFabButton, IonIcon, IonFabList]
 })
 export class FabPage implements OnInit {
 

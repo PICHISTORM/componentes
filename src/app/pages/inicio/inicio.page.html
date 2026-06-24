@@ -1,7 +1,18 @@
-
-
 <ion-header>
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <!--<ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>-->
+
+
     <ion-title color="primary">componentes</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,8 +20,8 @@
 <ion-content>
 
   <ion-list>
-    @for (c of componentes; track c.name) {
-      <ion-item routerLink="{{ c.redirectTo}}"
+    @for (c of componentes | async; track c.name) {
+      <ion-item [routerLink]="c.redirectTo"
       detail>
         <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
         <ion-label>{{ c.name }}</ion-label>

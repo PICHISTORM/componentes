@@ -9,7 +9,7 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   templateUrl: './grid.page.html',
   styleUrls: ['./grid.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCheckbox, IonButton, HeaderComponent, CommonModule, FormsModule, IonFooter, IonFab, IonFabButton, IonIcon, IonFabList, IonGrid, IonRow, IonCol, IonCard, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent]
+  imports: [IonContent, HeaderComponent, CommonModule, FormsModule, IonGrid, IonRow, IonCol, IonCard, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent]
 })
 export class GridPage implements OnInit {
 

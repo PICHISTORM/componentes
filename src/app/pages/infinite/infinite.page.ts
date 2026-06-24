@@ -9,7 +9,7 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   templateUrl: './infinite.page.html',
   styleUrls: ['./infinite.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonLabel, IonItem, IonList, IonInfiniteScrollContent, IonInfiniteScroll]
+  imports: [IonContent, CommonModule, FormsModule, HeaderComponent, IonLabel, IonItem, IonList, IonInfiniteScrollContent, IonInfiniteScroll]
 })
 export class InfinitePage implements OnInit {
 

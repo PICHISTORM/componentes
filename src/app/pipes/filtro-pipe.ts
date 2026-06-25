@@ -6,13 +6,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FiltroPipe implements PipeTransform {
 
-  transform( arreglo: any[], texto: string = ''): any[] {
+  transform( arreglo: any[],
+             texto: string = '',
+             columna: string = 'title'
+            ): any[] {
     console.log('(Pipe|Filtro)', arreglo);
     if (!texto || texto.trim() === '') {
       return arreglo;
     }
     return arreglo.filter(item =>
-      item.title.toLowerCase().includes(texto.toLowerCase())
+      item[columna].toLowerCase().includes(texto.toLowerCase())
     );
   }
 

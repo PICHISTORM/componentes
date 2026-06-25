@@ -98,5 +98,10 @@
       "icon": "search-circle-outline",
       "name": "Shearch",
       "redirectTo": "/search"
+    },
+    {
+      "icon": "copy-outline",
+      "name": "segment",
+      "redirectTo": "/segment"
     }
 ]

@@ -72,7 +72,11 @@ export const routes: Routes = [
   {
     path: 'modal',
     loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
+  },  {
+    path: 'popover',
+    loadComponent: () => import('./pages/popover/popover.page').then( m => m.PopoverPage)
   },
+
 
   /*
   {

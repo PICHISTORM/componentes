@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { tabsRoutes } from './pages/tabs/tabs.page';
 
 export const routes: Routes = [
 
@@ -72,7 +73,8 @@ export const routes: Routes = [
   {
     path: 'modal',
     loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
-  },  {
+  },
+  {
     path: 'popover',
     loadComponent: () => import('./pages/popover/popover.page').then( m => m.PopoverPage)
   },
@@ -88,6 +90,14 @@ export const routes: Routes = [
     path: 'search',
     loadComponent: () => import('./pages/search/search.page').then( m => m.SearchPage)
   },
+
+  {
+    path: 'tabs',
+    children: tabsRoutes
+  },  {
+    path: 'toast',
+    loadComponent: () => import('./pages/toast/toast.page').then( m => m.ToastPage)
+  }
 
 
   /*

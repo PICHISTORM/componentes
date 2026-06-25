@@ -84,6 +84,10 @@ export const routes: Routes = [
     path: 'refresher',
     loadComponent: () => import('./pages/refresher/refresher.page').then( m => m.RefresherPage)
   },
+  {
+    path: 'search',
+    loadComponent: () => import('./pages/search/search.page').then( m => m.SearchPage)
+  },
 
 
   /*

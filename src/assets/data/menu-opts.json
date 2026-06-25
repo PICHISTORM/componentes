@@ -93,5 +93,10 @@
       "icon": "arrow-down-circle-outline",
       "name": "Refresher",
       "redirectTo": "/refresher"
+    },
+    {
+      "icon": "search-circle-outline",
+      "name": "Shearch",
+      "redirectTo": "/search"
     }
 ]

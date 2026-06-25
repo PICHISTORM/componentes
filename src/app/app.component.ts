@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, AsyncPipe } from '@angular/common';
-import { IonApp, IonRouterOutlet, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonList, IonItem, IonIcon, IonLabel, MenuController, IonMenuToggle } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonList, IonItem, IonIcon, IonLabel, MenuController, IonMenuToggle, IonSplitPane } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { Componente } from '../app/interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { DataService } from '../app/services/data.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonIcon, IonLabel, RouterLink, AsyncPipe, IonMenuToggle],
+  imports: [IonApp, IonRouterOutlet, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonIcon, IonLabel, RouterLink, AsyncPipe, IonMenuToggle, IonSplitPane],
 })
 export class AppComponent implements OnInit{
 

@@ -72,7 +72,8 @@ export const routes: Routes = [
   {
     path: 'modal',
     loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
-  },  {
+  },
+  {
     path: 'popover',
     loadComponent: () => import('./pages/popover/popover.page').then( m => m.PopoverPage)
   },
@@ -89,8 +90,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/search/search.page').then( m => m.SearchPage)
   },
   {
+
     path: 'slides',
     loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
+  {
+    path: 'segment',
+    loadComponent: () => import('./pages/segment/segment.page').then( m => m.SegmentPage)
+
   },
 
 

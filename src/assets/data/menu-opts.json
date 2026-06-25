@@ -103,5 +103,11 @@
       "icon": "albums-outline",
       "name": "Slides",
       "redirectTo": "/slides"
+    },
+    {
+      "icon": "copy-outline",
+      "name": "segment",
+      "redirectTo": "/segment"
+
     }
 ]

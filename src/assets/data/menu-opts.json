@@ -99,6 +99,7 @@
       "name": "Search",
       "redirectTo": "/search"
     },
+
     {
       "icon": "albums-outline",
       "name": "Slides",
@@ -108,6 +109,17 @@
       "icon": "copy-outline",
       "name": "segment",
       "redirectTo": "/segment"
+    },
+
+    {
+      "icon": "cog-outline",
+      "name": "Tabs",
+      "redirectTo": "/tabs"
+    },
+    {
+      "icon": "pricetag-outline",
+      "name": "Toast",
+      "redirectTo": "/toast"
 
     }
 ]

@@ -88,6 +88,10 @@ export const routes: Routes = [
     path: 'search',
     loadComponent: () => import('./pages/search/search.page').then( m => m.SearchPage)
   },
+  {
+    path: 'slides',
+    loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
 
 
   /*

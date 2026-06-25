@@ -1,0 +1,46 @@
+ion-content {
+  --padding-top: 0;
+}
+
+swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+swiper-slide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card {
+  overflow: unset !important;
+  height: 300px;
+  width: 300px;
+}
+
+.slide-image {
+  width: 100px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 10px;
+}
+
+ion-card-header {
+  position: relative;
+  top: 0;
+}
+
+ion-card-content {
+  position: relative;
+  top: 0;
+}
+

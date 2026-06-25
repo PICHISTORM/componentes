@@ -96,7 +96,12 @@
     },
     {
       "icon": "search-circle-outline",
-      "name": "Shearch",
+      "name": "Search",
       "redirectTo": "/search"
+    },
+    {
+      "icon": "albums-outline",
+      "name": "Slides",
+      "redirectTo": "/slides"
     }
 ]
